@@ -3,7 +3,6 @@ import { graphql,Link } from "gatsby"
 import styled from 'styled-components'
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
 
 const BlogLink = styled(Link)`
@@ -26,8 +25,8 @@ export default ({ data }) => (
           <div key={node.id}>
             <BlogLink to={node.fields.slug}>
             <BlogTitle>{node.frontmatter.title} - {node.frontmatter.date}</BlogTitle>
-            <p>{node.excerpt}</p>
             </BlogLink>
+            <p>{node.excerpt}</p>
           </div> 
         ))
       }
